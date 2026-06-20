@@ -11,6 +11,6 @@ jobs:
     # this step will clone the code from latest branch into the runner 
     steps:
       - name: check out the code # code checkout
-        run: actions/checkout@v7  # use this predefined action
+        uses: actions/checkout@v7  # use this predefined action
       - name: Install linter
         run: pip install ruff # this will install the linting tool 
