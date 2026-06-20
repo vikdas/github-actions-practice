@@ -1,0 +1,15 @@
+# goal: lint check for syntax for python files
+## when? whwnever a python code is pushed 
+name: Auto Linter
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    # this step will clone the code from latest branch into the runner 
+    steps:
+      - name: check out the code
+        run: actions/checkout@v7  # use this predefined action
+        
